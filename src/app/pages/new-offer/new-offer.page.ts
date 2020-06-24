@@ -56,6 +56,7 @@ export class NewOfferPage implements OnInit {
         const item = {
             ...this.form.value,
             offerId: 1000 + Math.floor(Math.random() * 1000),
+            images: this.images,
         } as OfferItem;
         this.favourites.checkAndAdd(item);
 
