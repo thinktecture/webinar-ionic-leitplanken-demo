@@ -1,7 +1,8 @@
 import { Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular/core';
 import { ToastController } from '@ionic/angular';
 // import the correct camera from capacitor
-import { CameraResultType } from '@capacitor/core';
+import { Plugins, CameraResultType } from '@capacitor/core';
+const { Camera } = Plugins;
 
 // A good example how to build an app and use the camera 
 // https://ionicframework.com/docs/angular/your-first-app
