@@ -1,6 +1,6 @@
 import { Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular/core';
 import { ToastController } from '@ionic/angular';
-import { Plugins, CameraResultType, Permissions, PermissionType } from '@capacitor/core';
+import { Plugins, CameraResultType } from '@capacitor/core';
 const { Camera } = Plugins;
 
 @Component({
@@ -52,14 +52,6 @@ export class CameraComponent {
     }
 
     async takePictureCapacitor() {
-        try {
-            const cameraPermission = await Permissions.query({ name: PermissionType.Camera });
-            console.log(cameraPermission);
-
-        } catch (e) {
-            console.log(e);
-        }
-
         try {
             const image = await Camera.getPhoto({
                 quality: 90,
