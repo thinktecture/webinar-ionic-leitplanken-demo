@@ -11,8 +11,7 @@ import { mapTo, takeUntil } from 'rxjs/operators';
     templateUrl: 'app.component.html',
     styleUrls: [ 'app.component.scss' ],
 })
-export class AppComponent implements OnInit, OnDestroy {
-    private destroy$ = new Subject<boolean>();
+export class AppComponent {
     public mobile: boolean;
 
     constructor(
@@ -29,22 +28,6 @@ export class AppComponent implements OnInit, OnDestroy {
             this.splashScreen.hide();
 
             this.mobile = this.platform.is('mobile') || this.platform.is('mobileweb');
-
         });
-    }
-
-    ngOnInit() {
-        this.listenNetwork()
-    }
-
-
-    ngOnDestroy() {
-        this.destroy$.next(true);
-    }
-
-    private listenNetwork() {
-        const online$ = fromEvent(window, 'online').pipe(mapTo(true));
-        const offline$ = fromEvent(window, 'offline').pipe(mapTo(false));
-        merge(online$, offline$).pipe(takeUntil(this.destroy$)).subscribe(isOnline => console.log({ isOnline }));
     }
 }
