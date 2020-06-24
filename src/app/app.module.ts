@@ -16,10 +16,7 @@ import { RouteReuseStrategy } from '@angular/router';
     declarations: [ AppComponent ],
     entryComponents: [],
     imports: [ BrowserModule,
-        IonicModule.forRoot({
-            mode: 'ios',
-
-        }),
+        IonicModule.forRoot(),
         AppRoutingModule,
         ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }) ],
     providers: [
