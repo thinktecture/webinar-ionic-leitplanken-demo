@@ -10,13 +10,7 @@ import { FavListPage } from './fav-list.page';
 import { ShareModule } from '../../components/share.module';
 
 @NgModule({
-    imports: [
-        CommonModule,
-        FormsModule,
-        IonicModule,
-        FavListPageRoutingModule,
-        ShareModule,
-    ],
-  declarations: [FavListPage]
+  imports: [CommonModule, FormsModule, IonicModule, FavListPageRoutingModule, ShareModule],
+  declarations: [FavListPage],
 })
 export class FavListPageModule {}

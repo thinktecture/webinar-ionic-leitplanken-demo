@@ -10,15 +10,7 @@ import { OfferDetailsPage } from './offer-details.page';
 import { ShareModule } from '../../components/share.module';
 
 @NgModule({
-    imports: [
-        CommonModule,
-        FormsModule,
-        IonicModule,
-        OfferDetailsPageRoutingModule,
-        ShareModule,
-
-    ],
-    declarations: [ OfferDetailsPage ],
+  imports: [CommonModule, FormsModule, IonicModule, OfferDetailsPageRoutingModule, ShareModule],
+  declarations: [OfferDetailsPage],
 })
-export class OfferDetailsPageModule {
-}
+export class OfferDetailsPageModule {}

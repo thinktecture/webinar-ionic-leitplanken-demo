@@ -10,14 +10,7 @@ import { SearchPage } from './search.page';
 import { ShareModule } from '../../components/share.module';
 
 @NgModule({
-    imports: [
-        CommonModule,
-        FormsModule,
-        IonicModule,
-        ShareModule,
-        SearchPageRoutingModule,
-    ],
-    declarations: [ SearchPage ],
+  imports: [CommonModule, FormsModule, IonicModule, ShareModule, SearchPageRoutingModule],
+  declarations: [SearchPage],
 })
-export class SearchPageModule {
-}
+export class SearchPageModule {}

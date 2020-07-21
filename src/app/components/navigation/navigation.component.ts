@@ -5,28 +5,27 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 @Component({
-    selector: 'app-navigation',
-    templateUrl: './navigation.component.html',
-    styleUrls: [ './navigation.component.scss' ],
+  selector: 'app-navigation',
+  templateUrl: './navigation.component.html',
+  styleUrls: ['./navigation.component.scss'],
 })
 export class NavigationComponent {
-    public mobile: boolean;
+  public mobile: boolean;
 
-    constructor(
-        private platform: Platform,
-        private splashScreen: SplashScreen,
-        private statusBar: StatusBar,
-    ) {
-        this.initializeApp(); // todo in service
-    }
+  constructor(
+    private platform: Platform,
+    private splashScreen: SplashScreen,
+    private statusBar: StatusBar,
+  ) {
+    this.initializeApp(); // todo in service
+  }
 
-    initializeApp() {
-        this.platform.ready().then(() => {
-            this.statusBar.styleDefault();
-            this.splashScreen.hide();
+  initializeApp() {
+    this.platform.ready().then(() => {
+      this.statusBar.styleDefault();
+      this.splashScreen.hide();
 
-            this.mobile = this.platform.is('mobile') || this.platform.is('mobileweb');
-
-        });
-    }
+      this.mobile = this.platform.is('mobile') || this.platform.is('mobileweb');
+    });
+  }
 }

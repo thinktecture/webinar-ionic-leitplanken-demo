@@ -9,8 +9,8 @@ describe('GalleryComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GalleryComponent ],
-      imports: [IonicModule.forRoot()]
+      declarations: [GalleryComponent],
+      imports: [IonicModule.forRoot()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(GalleryComponent);

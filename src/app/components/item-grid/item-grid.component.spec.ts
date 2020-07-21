@@ -9,8 +9,8 @@ describe('ItemListingComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ItemGridComponent ],
-      imports: [IonicModule.forRoot()]
+      declarations: [ItemGridComponent],
+      imports: [IonicModule.forRoot()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(ItemGridComponent);

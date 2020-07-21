@@ -3,23 +3,20 @@ import { FavouritesService } from '../../services/favourites.service';
 import { OfferItem } from '../../services/item.service';
 
 @Component({
-    selector: 'app-fav-list',
-    templateUrl: './fav-list.page.html',
-    styleUrls: [ './fav-list.page.scss' ],
+  selector: 'app-fav-list',
+  templateUrl: './fav-list.page.html',
+  styleUrls: ['./fav-list.page.scss'],
 })
 export class FavListPage implements OnInit {
+  items$: Promise<OfferItem[]>;
 
-    items$: Promise<OfferItem[]>;
+  constructor(private readonly favourites: FavouritesService) {}
 
-    constructor(private readonly favourites: FavouritesService) {
-    }
+  async ionViewWillEnter() {
+    this.ngOnInit();
+  }
 
-    async ionViewWillEnter() {
-        this.ngOnInit();
-    }
-
-    async ngOnInit() {
-        this.items$ = this.favourites.getAll();
-    }
-
+  async ngOnInit() {
+    this.items$ = this.favourites.getAll();
+  }
 }

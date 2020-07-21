@@ -7,15 +7,8 @@ import { HomePage } from './home.page';
 import { HomePageRoutingModule } from './home-routing.module';
 import { ShareModule } from '../components/share.module';
 
-
 @NgModule({
-    imports: [
-        CommonModule,
-        FormsModule,
-        IonicModule,
-        HomePageRoutingModule,
-        ShareModule,
-    ],
-  declarations: [HomePage]
+  imports: [CommonModule, FormsModule, IonicModule, HomePageRoutingModule, ShareModule],
+  declarations: [HomePage],
 })
 export class HomePageModule {}

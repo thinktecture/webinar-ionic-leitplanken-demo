@@ -10,21 +10,16 @@ import { CameraComponent } from './camera/camera.component';
 import { GalleryComponent } from './gallery/gallery.component';
 
 const ALL_COMPONENTS = [
-    ItemListingComponent,
-    NavigationComponent,
-    ItemGridComponent,
-    CameraComponent,
-    GalleryComponent
-]
+  ItemListingComponent,
+  NavigationComponent,
+  ItemGridComponent,
+  CameraComponent,
+  GalleryComponent,
+];
 
 @NgModule({
-    declarations: ALL_COMPONENTS,
-    exports: ALL_COMPONENTS,
-    imports: [
-        CommonModule,
-        IonicModule,
-        RouterModule,
-    ],
+  declarations: ALL_COMPONENTS,
+  exports: ALL_COMPONENTS,
+  imports: [CommonModule, IonicModule, RouterModule],
 })
-export class ShareModule {
-}
+export class ShareModule {}

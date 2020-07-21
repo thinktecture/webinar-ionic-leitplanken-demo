@@ -6,8 +6,8 @@ import { FavListPage } from './fav-list.page';
 const routes: Routes = [
   {
     path: '',
-    component: FavListPage
-  }
+    component: FavListPage,
+  },
 ];
 
 @NgModule({
